@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jogo.js"></script>
+  </head>
+
+  <body onresize="adjustScreenGame()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/coracao_cheio.png">
+            <img id="v2" src="imagens/coracao_cheio.png">
+            <img id="v3" src="imagens/coracao_cheio.png">
+        </div>
+          <div class="timer"> Time: <span id="timer"></span></div>
+    </div>
+
+
+    <script>
+        document.getElementById('timer').innerHTML = time
+
+        var createFlies = setInterval(function(){
+          randomPosition()
+        }, timeCreateFlies)
+    </script>
+
+
+  </body>
+</html>
